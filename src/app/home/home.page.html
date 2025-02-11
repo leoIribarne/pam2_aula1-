@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid>
+      <ion-row>
+          <ion-input placeholder="Adcione seu nome" type ="text"[(ngModel)]="nome" ></ion-input>
+      </ion-row>
+      <ion-row>
+          <ion-input placeholder="Seu telefone" type ="number" [(ngModel)]="telefone"></ion-input>
+      </ion-row>
+      <ion-row>
+        <ion-input placeholder="Seu curso" type ="text"[(ngModel)]="curso" ></ion-input>
+    </ion-row>
+    <ion-row>
+        <ion-input placeholder="Seu horario de aulas" [(ngModel)]="horario"></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-button (click)="salva()" >ok</ion-button>
+    </ion-row>
+    <ion-row>
+      <div [innerHTML]="mensagem"></div>
+    </ion-row>
+    </ion-grid>
+    
+    <ion-grid *ngIf="esconder" >
+      <ion-row>
+        <ion-col class="no-padding " size="10" offset="1">
+          <ion-item class="label1 "[innerHTML]="nm"></ion-item>
+        </ion-col>
+        <ion-col class="no-padding"  size="10" offset="1">
+          <ion-item class="label2" [innerHTML]="tell"></ion-item>
+        </ion-col>
+        <ion-col class="no-padding"  size="10" offset="1">
+          <ion-item class="label2" [innerHTML]="cs"></ion-item>
+        </ion-col>
+        <ion-col class="no-padding"  size="10" offset="1">
+          <ion-item class="label2"[innerHTML]="hr"></ion-item>
+        </ion-col>
+        <ion-col class="no-padding"  size="10" offset="1">
+          <ion-item class="label3">
+            <ion-button class="botao" (click)="esconde()" >limpar</ion-button>
+          </ion-item>
+        </ion-col>
+        
+
+      </ion-row>   
+    </ion-grid>
+    <div [innerHTML]="mensagem"></div>
+
+</ion-content>
+      
